@@ -5,7 +5,9 @@ console.log("Webpack is working!")
 document.addEventListener("DOMContentLoaded", () => {
   let canvas = document.getElementById("game-canvas")
   let ctx = canvas.getContext("2d")
-  ctx.fillRect(20,20, 100, 100)
+  canvas.height = 450;
+  canvas.width = 900;
+  ctx.fillRect(20,20, 1200, 800)
   
   let inputs = {}
   document.addEventListener("keydown", (e) => {inputs[e.key] = true}, false);

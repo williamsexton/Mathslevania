@@ -2,6 +2,7 @@ export default class Animator {
   constructor(){
     this.animationFrame = 0;
     this.frameCount = 0;
+    
   }
   drawFrame(ctx, img, frameX, frameY, canvasX, canvasY, width, height, scale) {
     const scaledWidth = scale * width
@@ -22,6 +23,7 @@ export default class Animator {
     if (this.animationFrame >= numFrames) this.animationFrame = 0;
 
     this.drawFrame(ctx, img, this.animationFrame, 0, canvasX, canvasY, width, height, scale)
+    
   }
 }
 

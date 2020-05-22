@@ -5,14 +5,20 @@ export default class Level {
   constructor (inputs){
     this.player = new Player()
     this.inputs = inputs
-    this.monsters = problems.map((problem, idx) => new Monster(problem, null, idx)) //null sprite for now
+    this.monsters = problems.map((problem, idx) => {
+      if (idx < 3) return new Monster(problem, 'skeleton', idx)
+      if (idx > 2 && idx < 5) return new Monster(problem, 'mushroom', idx)
+    }) //null sprite for now
     this.currentMonster = 0;
     this.animating = false;
   }
 
   ded(ctx){
-    ctx.font = "30px Arial";
-    ctx.strokeText("You died", 10, 50);
+    ctx.fillStyle = "black"
+    ctx.fillRect(0,0,900,450)
+    ctx.fillStyle = "red"
+    ctx.font = "130px Comic Sans";
+    ctx.fillText("YOU DIED", 130, 200);
   }
 
   guess(){
@@ -30,7 +36,7 @@ export default class Level {
         this.animating = false;
         problem.displayedStep = undefined;
         
-      }, 1000)
+      }, 500)
     } else if (!result && !this.animating){
         this.player.hurt();
         monster.attack();
@@ -38,7 +44,7 @@ export default class Level {
         setTimeout(() => {
 
         this.animating = false;
-      }, 1000)
+      }, 500)
     }
   }
 
@@ -48,8 +54,12 @@ export default class Level {
     let result = problem.checkStep(problem.nextStep())
       if (!this.animating ) {
         this.animating = true;
-        this.player.defend()
-        if (!result) monster.attack()
+        if (!result) {
+          monster.attack()
+          this.player.defend()
+        } else {
+          this.player.badDefend()
+        }
         console.log('ok')
         setTimeout(() => {
 
@@ -58,7 +68,7 @@ export default class Level {
 
           problem.displayedStep = problem.getNewStep();
 
-        }, 1000)
+        }, 500)
     }
   }
 
@@ -82,10 +92,13 @@ export default class Level {
         }
     
         ctx.font = "15px Arial";
-        ctx.strokeText("press 'a' to attack", 10, 125);
+        ctx.fillStyle = 'white'
+        ctx.fillText("Press 'a' to attack or 'd' to defend", 300, 400);
     
-        ctx.font = "15px Arial";
-        ctx.strokeText("press 'd' to defend", 10, 140);
+        
+        ctx.fillText("If the next step to the math problem (shown in yellow)", 250, 415);
+        ctx.fillText("is correct, attack to advance the problem, otherwise", 252, 430);
+        ctx.fillText("defend to see another option.", 254, 445);
     
     } else if(!this.player.alive){
       this.ded(ctx)
