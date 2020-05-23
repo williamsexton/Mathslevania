@@ -127,7 +127,7 @@ export default class Monster{
     let answer = (this.problem.nextStep()) ?
       this.problem.nextStep() : "great job!"
 
-    bubb(ctx)
+    bubb(ctx, this.problem.step().length, answer.length)
 
     
     
@@ -141,8 +141,8 @@ export default class Monster{
       
       ctx.font = "18px Arial";
       ctx.fillStyle = "black"
-      ctx.fillText(`${this.idx + 1}.)`, 150, 90);
-      ctx.fillText(`${this.problem.step()}`, 200, 130);
+      ctx.fillText(`${this.idx + 1}.)`, 180, 115);
+      ctx.fillText(`${this.problem.step()}`, 170, 135);
       ctx.fillStyle = '#bab329'
       
         if (this.sprite === this.attackImg){

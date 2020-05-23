@@ -6,8 +6,10 @@ export default class Level {
     this.player = new Player()
     this.inputs = inputs
     this.monsters = problems.map((problem, idx) => {
-      if (idx < 3) return new Monster(problem, 'skeleton', idx)
-      if (idx > 2 && idx < 5) return new Monster(problem, 'mushroom', idx)
+      if (idx < 5) return new Monster(problem, 'skeleton', idx)
+      if (idx > 4 && idx < 7) return new Monster(problem, 'goblin', idx)
+      if (idx > 6 && idx < 10) return new Monster(problem, 'eyeball', idx)
+      if (idx > 9 ) return new Monster(problem, 'goblin', idx)
     }) //null sprite for now
     this.currentMonster = 0;
     this.animating = false;
@@ -103,8 +105,11 @@ export default class Level {
     } else if(!this.player.alive){
       this.ded(ctx)
     } else {
-      ctx.font = "50px Arial";
-      ctx.strokeText("you did it!", 10, 125);
+      ctx.fillStyle = "black"
+      ctx.fillRect(0, 0, 900, 450)
+      ctx.fillStyle = "green"
+      ctx.font = "130px Comic Sans";
+      ctx.fillText("YOU DID IT", 130, 200);
     }
   }
 

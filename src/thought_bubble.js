@@ -1,4 +1,4 @@
-const bubb = (ctx) => {
+const bubb = (ctx, length, answer) => {
   ctx.fillStyle = "white"
   ctx.beginPath();
   ctx.arc(
@@ -95,14 +95,226 @@ const bubb = (ctx) => {
   
   
   // END SMALL BUBBLE
-  
-  ctx.fill();
+  if (length > 15 || answer > 15){
   ctx.beginPath();
   ctx.arc(
-    420, 215, 5, 0, 2 * Math.PI, true
+    340, 165, 20, 0, 2 * Math.PI, true
   );
   ctx.fill();
   
+  ctx.beginPath();
+  ctx.arc(
+    310, 165, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+  
+  ctx.beginPath();
+  ctx.arc(
+    370, 170, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+  
+  ctx.beginPath();
+  ctx.arc(
+    400, 165, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(
+    340, 115, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+  
+  ctx.beginPath();
+  ctx.arc(
+    310, 115, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+  
+  ctx.beginPath();
+  ctx.arc(
+    370, 110, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+  
+  ctx.beginPath();
+  ctx.arc(
+    350, 140, 30, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(
+    390, 140, 30, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+  
+  ctx.beginPath();
+  ctx.arc(
+    400, 115, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(
+    430, 130, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(
+    425, 155, 20, 0, 2 * Math.PI, true
+  );
+  ctx.fill();
+  }
+    if (length > 30 || answer > 30){
+    ctx.beginPath();
+    ctx.arc(
+      460, 165, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      430, 165, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      490, 170, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      520, 165, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      460, 115, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      430, 115, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      490, 110, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      470, 140, 30, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      510, 140, 30, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      520, 115, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+     550, 130, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      545, 155, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+    }
+    
+  if (length > 45 || answer > 45) {
+    ctx.beginPath();
+    ctx.arc(
+      580, 165, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      550, 165, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      610, 170, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      640, 165, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      580, 115, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      550, 115, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      610, 110, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      590, 140, 30, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      630, 140, 30, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      640, 115, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      670, 130, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(
+      665, 155, 20, 0, 2 * Math.PI, true
+    );
+    ctx.fill();
+  }
 }
 
 export default bubb
