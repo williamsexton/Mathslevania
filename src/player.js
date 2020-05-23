@@ -3,39 +3,39 @@ const animator = new Animator()
 let idleImg = new Image();   // Create new img element
 idleImg.addEventListener('load', function () {
 }, false);
-idleImg.src = '../assets/player_sprites/player-idle.png'; // Set source path
+idleImg.src = './assets/player_sprites/player-idle.png'; // Set source path
 
 let hurtImg = new Image();   // Create new img element
 hurtImg.addEventListener('load', function () {
 }, false);
-hurtImg.src = '../assets/player_sprites/player-hurt.png'; // Set source path
+hurtImg.src = './assets/player_sprites/player-hurt.png'; // Set source path
 
 let attackImg = new Image();   // Create new img element
 attackImg.addEventListener('load', function () {
 }, false);
-attackImg.src = '../assets/player_sprites/player-attack3.png'; // Set source path
+attackImg.src = './assets/player_sprites/player-attack3.png'; // Set source path
 
 let deadImg = new Image();   // Create new img element
 deadImg.addEventListener('load', function () {
 }, false);
-deadImg.src = '../assets/player_sprites/player-dead.png'; // Set source path
+deadImg.src = './assets/player_sprites/player-dead.png'; // Set source path
 
 let defendImg = new Image();   // Create new img element
 defendImg.addEventListener('load', function () {
 }, false);
-defendImg.src = '../assets/player_sprites/player-defend.png'; // Set source path
+defendImg.src = './assets/player_sprites/player-defend.png'; // Set source path
 
 let badDefendImg = new Image();   // Create new img element
 badDefendImg.addEventListener('load', function () {
 }, false);
-badDefendImg.src = '../assets/player_sprites/player-bad-defend.png'; // Set source path
+badDefendImg.src = './assets/player_sprites/player-bad-defend.png'; // Set source path
 
 let badHeartImg = new Image();
-badHeartImg.src = '../assets/heart-background.png'
+badHeartImg.src = './assets/heart-background.png'
 let heartImg = new Image();
-heartImg.src = '../assets/heart.png'
+heartImg.src = './assets/heart.png'
 let heartBorderImg = new Image();
-heartBorderImg.src = '../assets/heart-border.png'
+heartBorderImg.src = './assets/heart-border.png'
 
 export default class Player {
   constructor(){

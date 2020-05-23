@@ -2,55 +2,55 @@ import Animator from './animation_util'
 import bubb from './thought_bubble'
 const animator = new Animator()
 let skeleIdleImg = new Image();   // Create new img element
-skeleIdleImg.src = '../assets/skeleton_sword/skeleton-idle.png'; // Set source path
+skeleIdleImg.src = './assets/skeleton_sword/skeleton-idle.png'; // Set source path
 
 let skeleHurtImg = new Image();   // Create new img element
-skeleHurtImg.src = '../assets/skeleton_sword/skeleton-hurt.png'; // Set source path
+skeleHurtImg.src = './assets/skeleton_sword/skeleton-hurt.png'; // Set source path
 
 let skeleAttackImg = new Image();   // Create new img element
-skeleAttackImg.src = '../assets/skeleton_sword/skeleton-attack.png'; // Set source path
+skeleAttackImg.src = './assets/skeleton_sword/skeleton-attack.png'; // Set source path
 
 let skeleDeadImg = new Image();   // Create new img element
-skeleDeadImg.src = '../assets/skeleton_sword/skeleton-dead.png'; // Set source path
+skeleDeadImg.src = './assets/skeleton_sword/skeleton-dead.png'; // Set source path
 
 
 let shroomIdleImg = new Image();   // Create new img element
-shroomIdleImg.src = '../assets/mushroom/mushroom-idle.png'; // Set source path
+shroomIdleImg.src = './assets/mushroom/mushroom-idle.png'; // Set source path
 
 let shroomHurtImg = new Image();   // Create new img element
-shroomHurtImg.src = '../assets/mushroom/mushroom-hurt.png'; // Set source path
+shroomHurtImg.src = './assets/mushroom/mushroom-hurt.png'; // Set source path
 
 let shroomAttackImg = new Image();   // Create new img element
-shroomAttackImg.src = '../assets/mushroom/mushroom-attack.png'; // Set source path
+shroomAttackImg.src = './assets/mushroom/mushroom-attack.png'; // Set source path
 
 let shroomDeadImg = new Image();   // Create new img element
-shroomDeadImg.src = '../assets/mushroom/mushroom-dead.png'; // Set source path
+shroomDeadImg.src = './assets/mushroom/mushroom-dead.png'; // Set source path
 
 
 let goblinIdleImg = new Image();   // Create new img element
-goblinIdleImg.src = '../assets/goblin/goblin-idle.png'; // Set source path
+goblinIdleImg.src = './assets/goblin/goblin-idle.png'; // Set source path
 
 let goblinHurtImg = new Image();   // Create new img element
-goblinHurtImg.src = '../assets/goblin/goblin-hurt.png'; // Set source path
+goblinHurtImg.src = './assets/goblin/goblin-hurt.png'; // Set source path
 
 let goblinAttackImg = new Image();   // Create new img element
-goblinAttackImg.src = '../assets/goblin/goblin-attack.png'; // Set source path
+goblinAttackImg.src = './assets/goblin/goblin-attack.png'; // Set source path
 
 let goblinDeadImg = new Image();   // Create new img element
-goblinDeadImg.src = '../assets/goblin/goblin-dead.png'; // Set source path
+goblinDeadImg.src = './assets/goblin/goblin-dead.png'; // Set source path
 
 
 let eyeballIdleImg = new Image();   // Create new img element
-eyeballIdleImg.src = '../assets/eyeball/eyeball-idle.png'; // Set source path
+eyeballIdleImg.src = './assets/eyeball/eyeball-idle.png'; // Set source path
 
 let eyeballHurtImg = new Image();   // Create new img element
-eyeballHurtImg.src = '../assets/eyeball/eyeball-hurt.png'; // Set source path
+eyeballHurtImg.src = './assets/eyeball/eyeball-hurt.png'; // Set source path
 
 let eyeballAttackImg = new Image();   // Create new img element
-eyeballAttackImg.src = '../assets/eyeball/eyeball-attack.png'; // Set source path
+eyeballAttackImg.src = './assets/eyeball/eyeball-attack.png'; // Set source path
 
 let eyeballDeadImg = new Image();   // Create new img element
-eyeballDeadImg.src = '../assets/eyeball/eyeball-dead.png'; // Set source path
+eyeballDeadImg.src = './assets/eyeball/eyeball-dead.png'; // Set source path
 
 export default class Monster{
   constructor(problem, type, idx){
