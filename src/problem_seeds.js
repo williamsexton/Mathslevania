@@ -87,7 +87,7 @@ const problems =
       ],
         options: [
           ["f(x) = 4 * 3^x", "f(x) = 3 * 4^x", "f(x) = 3^(4x)", "f(x) = 24x+3"],
-          ["This function is even", "This function is odd", "This function is neither evn nor odd"],
+          ["This function is even", "This function is odd", "This function is neither even nor odd"],
           ["An nth degree polynomial has n roots in the complex plane", "All numbers are prime or a product of primes", "Parabolas are solvable with the quadratic equation"],
         ],
         answers: [1, 2, 0] 
@@ -95,7 +95,7 @@ const problems =
        {
         steps: [
           "Welcome to Calculus!",
-          "If you travel 45 miles in 30 minutes, you must have at one point gone 90mph",
+          "Traveling 45 miles in 30 minutes, you must have at one point gone 90mph",
           'You throw a ball straight in the air, when will it have no velocity?',
           "Phenomenal work, these are hard problems."
         ],
