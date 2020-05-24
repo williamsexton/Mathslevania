@@ -2,3 +2,64 @@
 #game-canvas {
   background-image: url(../assets/background.png);
 }
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#outer{
+  border: solid black 1px;
+  background-image: url(../assets/title-background.png);
+  width: 900px;
+  height: 450px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+#outer.hidden{
+  display: none;
+}
+#title{
+  color:rgb(160, 13, 13);
+  font-size: 50px;
+  text-shadow: white 2px 0px 4px;
+}
+
+#theButton{
+  width: 100px;
+  height: 30px;
+  border: solid yellow 2px;
+  color: yellow;
+  font-size: 24px;
+  background-color: transparent;
+  padding-bottom: 32px;
+  text-align: center;
+  padding-right: -5px;
+}
+#theButton:hover{
+  width: 100px;
+  height: 30px;
+  border: solid rgb(255, 255, 211) 2px;
+  color: rgb(255, 255, 186);
+  font-size: 24px;
+  background-color: transparent;
+  padding-bottom: 32px;
+  text-align: center;
+  padding-right: -5px;
+}
+#theButton:active{
+  width: 100px;
+  height: 30px;
+  border: solid rgb(109, 109, 2) 2px;
+  color: rgb(92, 92, 0);
+  font-size: 24px;
+  background-color: transparent;
+  padding-bottom: 32px;
+  text-align: center;
+  padding-right: -5px;
+}
