@@ -4,6 +4,13 @@ export default class GameView {
     this.ctx = ctx
   }
   start(){
-    window.setInterval(() => this.game.step(this.ctx), 30)
+    let handle = window.setInterval(() => {
+      if (this.game.over) this.end(handle)
+      this.game.step(this.ctx)
+    }, 30)
+  }
+
+  end(handle){
+    window.clearInterval(handle)
   }
 }

@@ -1,16 +1,20 @@
 import Player from "./player";
 import Monster from "./monster";
-import problems from './problem_seeds'
+
 export default class Level {
-  constructor (inputs){
+  constructor (inputs, problems, monsterType){
     this.player = new Player()
     this.inputs = inputs
+    this.over = false;
+    this.problems = problems
+    if(monsterType === "gauntlet"){
     this.monsters = problems.map((problem, idx) => {
       if (idx < 5) return new Monster(problem, 'skeleton', idx)
       if (idx > 4 && idx < 7) return new Monster(problem, 'goblin', idx)
       if (idx > 6 && idx < 10) return new Monster(problem, 'eyeball', idx)
-      if (idx > 9 ) return new Monster(problem, 'goblin', idx)
+      if (idx > 9 ) return new Monster(problem, 'mushroom', idx)
     }) //null sprite for now
+    } else this.monsters = problems.map((problem, idx) => new Monster(problem, monsterType, idx))
     this.currentMonster = 0;
     this.animating = false;
   }
@@ -21,6 +25,17 @@ export default class Level {
     ctx.fillStyle = "red"
     ctx.font = "130px Comic Sans";
     ctx.fillText("YOU DIED", 130, 200);
+    ctx.fillStyle = "red"
+    ctx.font = "30px Comic Sans";
+    ctx.fillText(`${this.currentMonster} Monsters Dispatched`, 130, 300);
+    this.over = true;
+    window.setTimeout(
+      () => {
+        let modal = document.getElementById("outer")
+        modal.className = ''
+      },
+      1000
+    )
   }
 
   guess(){
@@ -110,6 +125,16 @@ export default class Level {
       ctx.fillStyle = "green"
       ctx.font = "130px Comic Sans";
       ctx.fillText("YOU DID IT", 130, 200);
+      ctx.font = "30px Comic Sans";
+      ctx.fillText(`${this.currentMonster} Monsters Dispatched`, 130, 300);
+      this.over = true;
+      window.setTimeout(
+        () => {
+          let modal = document.getElementById("outer")
+          modal.className = ''
+        },
+        1000
+      )
     }
   }
 

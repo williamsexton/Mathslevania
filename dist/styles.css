@@ -24,6 +24,19 @@
 #outer.hidden{
   display: none;
 }
+#levelSelect{
+  width: 900px;
+  background-color: blue;
+  height: 450px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#levelSelect.hidden{
+  display: none;
+}
 #title{
   color:rgb(160, 13, 13);
   font-size: 50px;

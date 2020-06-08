@@ -90,7 +90,7 @@ export default class Monster{
     if (!this.animating) {
       this.sprite = this.hurtImg;
       this.animationFrame = 0;
-      this.numFrames = (this.type === 'skeleton') ? 11 : 4;
+      this.numFrames = 4
       this.animating = true;
       setTimeout(() => {
         this.animating = false;
@@ -108,12 +108,17 @@ export default class Monster{
       this.animationFrame = 0;
       this.numFrames = (this.type === 'skeleton') ? 9 : 4;
       this.animating = true;
+      
+
       setTimeout(() => {
         this.sprite = this.idleImg;
         this.animationFrame = 0;
         this.numFrames = (this.type === 'skeleton') ? 3 : (this.type === 'eyeball') ? 8 : 4;
         this.animating = false;
         this.alive = false;
+        this.problem.currentStep = 0;
+        this.problem.displayedStep = undefined;
+        this.problem.solved = false;
       }, 500)
     }
   }
@@ -122,6 +127,7 @@ export default class Monster{
   draw(ctx, inputs){
     
     if (this.problem.solved){
+      console.log(this.problem)
       this.die()
     }
     let answer = (this.problem.nextStep()) ?
@@ -140,10 +146,10 @@ export default class Monster{
       let speed;
       
       ctx.font = "18px Arial";
-      ctx.fillStyle = "black"
+      ctx.fillStyle = "black";
       ctx.fillText(`${this.idx + 1}.)`, 180, 115);
       ctx.fillText(`${this.problem.step()}`, 170, 135);
-      ctx.fillStyle = '#bab329'
+      ctx.fillStyle = '#bab329';
       
         if (this.sprite === this.attackImg){
           width = (this.type === 'skeleton') ? 102 : 150;
@@ -157,7 +163,7 @@ export default class Monster{
 
         }
       if (this.sprite === this.hurtImg){
-        speed = 13
+        speed =  10;
         ctx.fillStyle = 'green'
 
       }
@@ -167,7 +173,7 @@ export default class Monster{
 
       }
       if (this.sprite === this.deadImg){
-        speed = (this.type === 'eyeball') ? 4 :8
+        speed = (this.type === 'eyeball') ? 4 : 16
         ctx.fillStyle = 'green'
 
       }
