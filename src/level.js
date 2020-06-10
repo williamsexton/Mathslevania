@@ -108,14 +108,7 @@ export default class Level {
           this.currentMonster ++;
         }
     
-        ctx.font = "15px Arial";
-        ctx.fillStyle = 'white'
-        ctx.fillText("Press 'a' to attack or 'd' to defend", 300, 400);
-    
         
-        ctx.fillText("If the next step to the math problem (shown in yellow)", 250, 415);
-        ctx.fillText("is correct, attack to advance the problem, otherwise", 252, 430);
-        ctx.fillText("defend to see another option.", 254, 445);
     
     } else if(!this.player.alive){
       this.ded(ctx)

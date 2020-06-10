@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let modal = document.getElementById("levelSelect")
     modal.className = 'hidden'
     let inputs = {}
+    document.getElementById("game-canvas").className = "gauntlet"
     document.addEventListener("keydown", (e) => {inputs[e.key] = true}, false);
     document.addEventListener("keyup", (e) => {inputs[e.key] = false}, false);
     let game = undefined;
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let modal = document.getElementById("levelSelect")
     modal.className = 'hidden'
     let inputs = {}
+    document.getElementById("game-canvas").className="linear"
     document.addEventListener("keydown", (e) => {inputs[e.key] = true}, false);
     document.addEventListener("keyup", (e) => {inputs[e.key] = false}, false);
     let game = undefined;
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let modal = document.getElementById("levelSelect")
     modal.className = 'hidden'
     let inputs = {}
+    document.getElementById("game-canvas").className = "trig"
     document.addEventListener("keydown", (e) => {inputs[e.key] = true}, false);
     document.addEventListener("keyup", (e) => {inputs[e.key] = false}, false);
     let game = undefined;
@@ -61,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let modal = document.getElementById("levelSelect")
     modal.className = 'hidden'
     let inputs = {}
+    document.getElementById("game-canvas").className = "calculus"
     document.addEventListener("keydown", (e) => {inputs[e.key] = true}, false);
     document.addEventListener("keyup", (e) => {inputs[e.key] = false}, false);
     let game = undefined;
