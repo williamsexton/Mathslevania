@@ -1,5 +1,4 @@
-import Player from "./player";
-import Monster from "./monster";
+
 import Level from './level'
 export default class Game {
   constructor(inputs, problems, type){

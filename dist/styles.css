@@ -163,3 +163,27 @@ button:active{
   font-size: 45px;
   text-shadow: white 2px 0px 4px;
 }
+.hidden{
+  display: none;
+}
+#tutorialModal{
+  position: absolute;
+
+  width: 900px;
+  height: 450px;
+}
+#tutorialModal img{
+  position: relative;
+  width: 900px;
+  height: 450px;
+}
+#nextPageButton{
+  position: relative;
+  bottom: 70px;
+  left: 700px;
+}
+#prevPageButton{
+  position: relative;
+  bottom: 70px;
+  right: 60px;
+}

@@ -180,7 +180,7 @@ export const trig =
         ["x = -45 deg", "x = 135 deg", "x = - 135 deg"],
         [ "3", "4"],
       ],
-      answers: [1, 2]
+      answers: [1, 1]
     },
     {
       steps: ["Describe the secant of x.",

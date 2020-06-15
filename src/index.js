@@ -1,4 +1,3 @@
-import Player from './player'
 import Game from './game'
 import GameView from './game_view'
 import * as problems from './problem_seeds'
@@ -10,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let startButton2 = document.getElementById("startLevel2")
   let startButton3 = document.getElementById("startLevel3")
   let startButton4 = document.getElementById("startLevel4")
+  let tutorialButton = document.getElementById("tutorialButton")
   let ctx = canvas.getContext("2d")
   canvas.height = 450;
   canvas.width = 900;
@@ -72,6 +72,43 @@ document.addEventListener("DOMContentLoaded", () => {
     game = new Game(inputs, problems.calc, "mushroom")
     gameview = new GameView(game, ctx)
     gameview.start();
+  })
+  tutorialButton.addEventListener("click", () => {
+    let modal = document.getElementById("levelSelect")
+    modal.className = 'hidden'
+    let tutorialModal = document.getElementById("tutorialModal")
+    let tutorialPage = 1
+    tutorialModal.className=""
+    let currentPage = document.getElementById("tutorial" + tutorialPage)
+    currentPage.className = ""
+    let nextPageButton = document.getElementById("nextPageButton")
+    let prevPageButton = document.getElementById("prevPageButton")
+    nextPageButton.addEventListener("click", () =>{
+      currentPage.className = "hidden"
+      tutorialPage ++
+      currentPage = document.getElementById("tutorial" + tutorialPage)
+      if (currentPage) currentPage.className = ""
+      if (tutorialPage > 1 && tutorialPage < 4) {
+        prevPageButton.className = ""
+        nextPageButton.innerText = "Next Page"
+      } else if (tutorialPage === 4){
+        nextPageButton.innerText = "Level Select"
+      } else {
+        document.getElementById("levelSelect").className=""
+        tutorialModal.className="hidden"
+      }
+    })
+    prevPageButton.addEventListener("click", () => {
+      tutorialPage --
+      currentPage.className = "hidden"
+      currentPage = document.getElementById("tutorial" + tutorialPage)
+      currentPage.className = ""
+      if (tutorialPage === 1) prevPageButton.className="hidden"
+      
+
+
+
+    })
   })
   
 })
