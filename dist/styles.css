@@ -2,6 +2,7 @@ html{
   background-image: url(../assets/croppedbrix.png);
   background-size: 100vw 100vh;
   background-repeat: repeat;
+  overflow: hidden;
 }
 #game-canvas{
   margin: 70px;
@@ -199,9 +200,15 @@ button:active{
 
 }
 #about-logos{
-  width:900px;
-  display: flex;
-  justify-content: space-around;
+width: 900px;
+padding: 25px 0px;
+display: flex;
+justify-content: space-around;
+background: rgba(65, 38, 38, 0.625);
+border-top-right-radius: 30px;
+border-top-left-radius: 30px;
+position: fixed;
+bottom: 0;
 }
 
 #about-logos img{
@@ -210,6 +217,21 @@ button:active{
   position: relative;
   
 
+}
+
+
+#github:hover{
+  border-radius: 50%;
+  box-shadow: white 0px 0px 10px;
+}
+#linkedin:hover{
+  border-radius: 50%;
+  box-shadow: white 0px 0px 10px;
+}
+#angel:hover{
+  border-radius: 10px;
+  box-shadow: white 0px 0px 10px;
+  padding: -5px;
 }
 #main{
   justify-content: center;
