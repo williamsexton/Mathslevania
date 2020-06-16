@@ -1,4 +1,11 @@
-
+html{
+  background-image: url(../assets/croppedbrix.png);
+  background-size: 100vw 100vh;
+  background-repeat: repeat;
+}
+#game-canvas{
+  margin: 70px;
+}
 #game-canvas.gauntlet {
   background-image: url(../assets/background.png);
   background-repeat: no-repeat;
@@ -42,6 +49,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  top: 70px
 
 }
 #outer.hidden{
@@ -59,6 +67,7 @@
   justify-content: space-around;
   justify-content: center;
   align-items: center;
+  top: 70px
 }
 #levelSelect.hidden{
   display: none;
@@ -171,6 +180,7 @@ button:active{
 
   width: 900px;
   height: 450px;
+  top:70px
 }
 #tutorialModal img{
   position: relative;
@@ -186,4 +196,24 @@ button:active{
   position: relative;
   bottom: 70px;
   right: 60px;
+
+}
+#about-logos{
+  width:900px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#about-logos img{
+  width: 80px;
+  height: 80px;
+  position: relative;
+  
+
+}
+#main{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
