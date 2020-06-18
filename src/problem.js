@@ -53,6 +53,7 @@ export default class Problem {
     this.currentStep++
     if (this.currentStep === this.steps.length - 1){
       this.solved = true;
+      
     }
   }
 
