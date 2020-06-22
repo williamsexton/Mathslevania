@@ -2,12 +2,14 @@
 # PRODUCTION README
 
 ## THE GOAL
+![Action Flow](https://meat-project-seed.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-22+at+8.57.33+AM.png)
   To sharpen my understanding Vanilla Javascript, the HTML Canvas and DOM manipulation, I took 3 days in an attempt to build a simple educational videogame with varied backgrounds and enemies, the kind that could have kept one of my students distracted for a good half hour. The game is less a game and more a means of thinly cloaking math problems.
   
 ## TECHNOLOGIES
   - Javascript
   - HTML5 Canvas
 ## THE END RESULT
+![Screen Capture](https://meat-project-seed.s3-us-west-1.amazonaws.com/newRec.gif)
   My game was nothing groundbreaking, but I completed what I set out to do, and developed my knwolege of basic DOM operations, and I got a lot of people to solve math problems under the guise of beta testing. Wonderful stuff
   
 ## KEY FEATURES
