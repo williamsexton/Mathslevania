@@ -1,4 +1,4 @@
-# mathslevania
+# Mathslevania
 # PRODUCTION README
 
 ## THE GOAL
